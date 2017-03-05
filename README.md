@@ -1,2 +1,2 @@
 # LISP_ITMO 
-Function programming course LISP language.
+Functional programming course LISP language.
