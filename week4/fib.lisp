@@ -16,9 +16,9 @@
 
 (defun fib-memo (n)
     "n-ый член ряда Фибоначчи"
-    (if (null (aref *fibarr* n))
-        (setf (aref *fibarr* n )
-            (+ (fib-memo (- n 1))
-                    (fib-memo (- n 2))))
-        (aref *fibarr* n)))
+    (if (null (aref *fibarr* n)) ; если значение н = 0 значит он не вычислен 
+        (setf (aref *fibarr* n ) ; и нужно запомниьт результат вызовов:
+            (+ (fib-memo (- n 1)) ; вызов н-1 
+                    (fib-memo (- n 2)))) ; вызов н-2
+        (aref *fibarr* n))) ; а если нет тогда просто взять его из массива
 
